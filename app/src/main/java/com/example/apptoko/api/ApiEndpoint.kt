@@ -2,9 +2,12 @@ package com.example.apptoko.api
 
 import android.provider.ContactsContract.CommonDataKinds.Email
 import com.example.apptoko.response.login.LoginResponse
+import com.example.apptoko.response.produk.ProdukResponse
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
+import retrofit2.http.GET
+import retrofit2.http.Header
 import retrofit2.http.POST
 
 interface ApiEndpoint {
@@ -16,4 +19,6 @@ interface ApiEndpoint {
         @Field("password") password: String
     ): Call<LoginResponse>
 
+    @GET("produk")
+    fun getProduk(@Header("Authorization") token : String) : Call<ProdukResponse>
 }

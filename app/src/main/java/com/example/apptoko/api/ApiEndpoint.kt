@@ -4,6 +4,7 @@ import com.example.apptoko.response.itemTransaksi.ItemTransaksiResponsePost
 import com.example.apptoko.response.login.LoginResponse
 import com.example.apptoko.response.produk.ProdukResponse
 import com.example.apptoko.response.produk.ProdukResponsePost
+import com.example.apptoko.response.transaksi.TransaksiResponse
 import com.example.apptoko.response.transaksi.TransaksiResponsePost
 import retrofit2.Call
 import retrofit2.http.*
@@ -65,4 +66,7 @@ interface ApiEndpoint {
         @Field("qty") qty : Int,
         @Field("harga_saat_transaksi") harga_saat_transaksi : Int,
     ) : Call<ItemTransaksiResponsePost>
+
+    @GET("transaksi_bulan_ini")
+    fun getTransaksi(@Header("Authorization") token : String) : Call<TransaksiResponse>
 }

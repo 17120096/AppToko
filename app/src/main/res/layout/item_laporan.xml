@@ -6,53 +6,39 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/txtNamaProduk"
+        android:id="@+id/txtTglTransaksi"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:text="Bakso"
-        android:textAllCaps="false"
-        android:textColor="@color/mustard"
+        android:text="2023/01/20"
+        android:textColor="@color/sage"
         android:textSize="18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtHarga"
+        android:id="@+id/txtNoNota"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:text="10.000"
+        android:text="#0001"
+        android:textColor="@color/mustard"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNamaProduk" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTglTransaksi" />
 
-    <ImageButton
-        android:id="@+id/btnDelete"
+    <TextView
+        android:id="@+id/txtTotalItemTransaksi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:backgroundTint="#FF5722"
-        android:minHeight="48dp"
+        android:text="Rp120.000,00"
+        android:textColor="@color/forest_green"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_delete_forever_24"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/btnEdit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:backgroundTint="@color/sage"
-        android:minHeight="48dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnDelete"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_edit_24"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/divider2"
@@ -60,5 +46,6 @@
         android:layout_height="1dp"
         android:layout_marginTop="20dp"
         android:background="?android:attr/listDivider"
-        app:layout_constraintTop_toBottomOf="@+id/txtHarga" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNoNota" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

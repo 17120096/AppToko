@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/forest_green"
     tools:context=".ProdukFragment">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutDasar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutAtas"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@color/design_default_color_primary"
+            android:background="@color/sage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -26,9 +27,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
-                android:backgroundTint="@android:color/holo_orange_dark"
+                android:backgroundTint="@color/forest_green"
                 android:text="Tambah"
-                app:icon="@drawable/baseline_add_box_24"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

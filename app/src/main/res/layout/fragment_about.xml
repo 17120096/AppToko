@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:text="DIAN AGUS YULIANTO"
             android:textAlignment="center"
+            android:textColor="@color/forest_green"
             android:textSize="20sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@+id/btnLogout"
@@ -45,7 +46,9 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:text="17.12.0096"
+            android:textColor="@color/sage"
             android:textSize="18sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />

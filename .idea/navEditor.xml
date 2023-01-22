@@ -32,13 +32,25 @@
                       </LayoutPositions>
                     </value>
                   </entry>
-                  <entry key="produkFragment2">
+                  <entry key="produkFormFragment">
                     <value>
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-178" />
-                            <option name="y" value="-130" />
+                            <option name="x" value="209" />
+                            <option name="y" value="165" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
+                  <entry key="produkFragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="12" />
+                            <option name="y" value="159" />
                           </Point>
                         </option>
                       </LayoutPositions>

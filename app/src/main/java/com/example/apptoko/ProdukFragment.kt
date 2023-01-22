@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apptoko.LoginActivity.Companion.sessionManager
@@ -28,7 +30,16 @@ class ProdukFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_produk, container, false)
         getProduk(view)
-        
+
+        val btnTambah = view.findViewById<Button>(R.id.btnTambah)
+
+        btnTambah.setOnClickListener{
+            //Toast.makeText(activity?.applicationContext, "Click", Toast.LENGTH_LONG).show()
+            val bundle = Bundle()
+            bundle.putString("status", "tambah")
+
+            findNavController().navigate(R.id.produkFormFragment, bundle)
+        }
 
         return view
     }

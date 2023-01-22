@@ -1,15 +1,23 @@
 package com.example.apptoko.adapter
 
+import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apptoko.LoginActivity
 import com.example.apptoko.R
 import com.example.apptoko.api.BaseRetrofit
 import com.example.apptoko.response.produk.Produk
+import com.example.apptoko.response.produk.ProdukResponsePost
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.text.NumberFormat
 import java.util.*
 
@@ -32,6 +40,34 @@ class ProdukAdapter(val listproduk: List<Produk>):RecyclerView.Adapter<ProdukAda
         holder.txtHarga.text = numberFormat.format(produk.harga.toInt()).toString()
 
         val token = LoginActivity.sessionManager.getString("TOKEN")
+        holder.btnDelete.setOnClickListener{
+            api.deleteProduk(token.toString(), produk.id.toInt()).enqueue(object :
+                Callback<ProdukResponsePost> {
+                override fun onResponse(
+                    call: Call<ProdukResponsePost>,
+                    response: Response<ProdukResponsePost>
+                ) {
+                    Log.d("Data", response.toString())
+                    Toast.makeText(holder.itemView.context, "Data dihapus", Toast.LENGTH_LONG).show()
+
+                    holder.itemView.findNavController().navigate(R.id.produkFragment)
+                }
+
+                override fun onFailure(call: Call<ProdukResponsePost>, t: Throwable) {
+                    Log.e("Data", t.toString())
+                }
+
+            })
+
+        }
+
+        holder.btnEdit.setOnClickListener{
+            val bundle = Bundle()
+            bundle.putParcelable("produk", produk)
+            bundle.putString("status", "edit")
+
+            holder.itemView.findNavController().navigate(R.id.produkFormFragment, bundle)
+        }
 
     }
 

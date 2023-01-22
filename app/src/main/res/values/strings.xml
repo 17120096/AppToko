@@ -15,4 +15,7 @@
     <string name="halaman_produk">Halaman Produk</string>
     <string name="halaman_laporan">Halaman Laporan</string>
     <string name="halaman_tentang_kami">Halaman Tentang Kami</string>
+    <string name="stok">Stok</string>
+    <string name="simpan">SIMPAN</string>
+    <string name="nama_produk">Nama Produk</string>
 </resources>

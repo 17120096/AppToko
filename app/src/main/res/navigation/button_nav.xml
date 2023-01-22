@@ -30,4 +30,13 @@
         android:name="com.example.apptoko.ProdukFormFragment"
         android:label="fragment_produk_form"
         tools:layout="@layout/fragment_produk_form" />
+    <fragment
+        android:id="@+id/bayarFragment"
+        android:name="com.example.apptoko.BayarFragment"
+        android:label="fragment_bayar"
+        tools:layout="@layout/fragment_bayar" >
+        <argument
+            android:name="argsCart"
+            app:argType="com.example.apptoko.response.cart.Cart" />
+    </fragment>
 </navigation>
